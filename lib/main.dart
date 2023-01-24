@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() {
-    runApp(const MyApp());
+    runApp(const GetMaterialApp(home:MyApp())); // 첫페이지를 시작하는 부분을 GetMaterialApp으로 감싸줍니다.
 }
 
 class MyApp extends StatelessWidget {
