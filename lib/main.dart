@@ -111,7 +111,18 @@ class Reactive extends StatelessWidget {
               },
             ),
           ),
-        ],
+          Obx( // 반응형 상태관리 - 2
+                () {
+              return ElevatedButton(
+                child: Text(
+                  '반응형 2 / 현재 숫자: ${Get.find<ReactiveController>().counter.value}', // .value 로 접근
+                ),
+                onPressed: () {
+                  Get.find<ReactiveController>().increase();
+                },
+              );
+            },
+          ),        ],
       ),
     );
   }
