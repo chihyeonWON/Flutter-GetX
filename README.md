@@ -54,3 +54,13 @@ SimpleController를 생성합니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/214230462-8a9a286f-000d-4c64-b91d-09a11ada0f87.png)
 
+## Controller 사용
+```
+GetBuilder 아래의 모든 위젯은 controller에서 변경되는 데이터를 실시간으로 반영할 수 있는 상태가 됩니다.
+기본 Stateful Widget에서의 모든 위젯은 setState()에서 변경되는 데이터가 있으면 모든 화면을 재랜더링하는 반면에
+GetBuilder<SimpleController>(builder:(controller) { })  { } 안의 변경되는 데이터 부분만 재렌더링합니다.
+counter 변수는 ${controller.counter}으로 접근 가능하며 increase() 함수 역시 controller.increase()로 접근 가능합니다.
+
+다음은 버튼을 클릭했을 때 컨트롤러 안의 counter 변수를 1씩 증가시키는 화면의 예제입니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/214232091-8b28bf2c-35fc-4a9a-9111-470736912319.png)
