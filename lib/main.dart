@@ -30,6 +30,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
+class SimpleController extends GetxController { // 단순상태관리를 위한 Controller 생성
+  int counter = 0; // 정수형 counter 변수
+
+  void increase() { // counter를 1씩 증가시키는 increase() 함수
+    counter++;
+    update();
+  }
+}
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
