@@ -79,12 +79,20 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+class ReactiveController extends GetxController { // 반응형 상태관리를 위한 컨트롤러
+  RxInt counter = 0.obs;
+
+  void increase() {
+    counter++;
+  }
+}
+
 class Reactive extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar(title:Text('Reactive Controller'),)
+      appBar:AppBar(title:Text('반응형 상태관리'),)
     );
   }
 }
