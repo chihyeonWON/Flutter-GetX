@@ -93,7 +93,26 @@ class Reactive extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(ReactiveController()); // 반응형  상태 관리 controller 등록
     return Scaffold(
-      appBar:AppBar(title:Text('반응형 상태관리'),)
+      appBar:AppBar(title:Text('반응형 상태관리'),),
+      body: Column(
+        children: [
+          Center(
+            child: GetX<ReactiveController>( // 반응형 상태관리 - 1
+              builder: (controller) {
+                return ElevatedButton(
+                  child: Text(
+                    '반응형 1 / 현재 숫자: ${controller.counter.value}', // .value 로 접근
+                  ),
+                  onPressed: () {
+                    controller.increase();
+                    // Get.find<ReactiveController>().increase();
+                  },
+                );
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
