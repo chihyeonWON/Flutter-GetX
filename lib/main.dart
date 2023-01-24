@@ -39,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(SimpleController()); // controller 등록
     return Scaffold(
     );
   }
