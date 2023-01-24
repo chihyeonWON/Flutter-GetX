@@ -16,6 +16,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(),
+      routes:{
+        '/first':(context)=>MyHomePage(),
+        '/second':(context)=>Reactive(),
+      }
     );
   }
 }
@@ -41,6 +45,46 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     Get.put(SimpleController()); // controller 등록
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("단순 상태관리"),
+      ),
+      body: Column(
+        children: [
+          Center(
+            child: GetBuilder<SimpleController>( // 실시간 렌더링
+              builder: (controller) {
+                return ElevatedButton(
+                  child: Text(
+                    '현재 숫자: ${controller.counter}',
+                  ),
+                  onPressed: () {
+                    controller.increase();
+                    // Get.find<SimpleController>().increase();
+                  },
+                );
+              },
+            ),
+          ),
+          ElevatedButton(
+            child:Text('반응형 상태관리로'),
+            onPressed:() async {
+              await Navigator.pushNamed(
+                context, '/second'
+              );
+            }
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class Reactive extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar:AppBar(title:Text('Reactive Controller'),)
     );
   }
 }
