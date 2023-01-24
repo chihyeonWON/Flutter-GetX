@@ -64,3 +64,17 @@ counter 변수는 ${controller.counter}으로 접근 가능하며 increase() 함
 다음은 버튼을 클릭했을 때 컨트롤러 안의 counter 변수를 1씩 증가시키는 화면의 예제입니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/214232091-8b28bf2c-35fc-4a9a-9111-470736912319.png)
+
+## 2. 반응형 상태 관리 예시
+```
+단순 상태 관리는 변경된 데이터가 기존의 데이터와 같은지 확인하는 작업을 하지 않습니다.
+하지만 반응형 상태 관리는 데이터의 변화에 민감하게 반응하여 작동하는 worker라는 기능을 추가로 제공합니다.
+
+반응형 상태 관리 역시 Controller을 하나 생성합니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/214233737-2fdc0ac2-93ad-4422-950c-dda4149feda2.png)
+```
+단순 상태 관리 컨트롤러와 차이점은 변수를 선언하는 방식이 변수의 타입을 RxInt, RxString등 Rx{타입}의 방식으로 선언하고 
+변수의 값은 값 뒤에 ‘.obs’를 붙이게 됩니다. 
+업데이트의 경우 update() 함수를 부르지 않아도 됩니다.
+```
