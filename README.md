@@ -85,3 +85,22 @@ counter 변수는 ${controller.counter}으로 접근 가능하며 increase() 함
 사용하고자하는 화면의 클래스에 Get.put() 메서드로 controller를 등록해줍니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/214234554-dc205a2d-9ddd-49b9-b391-882f6a12b964.png)
+
+## 반응형 상태관리에서의 controller 사용
+```
+반응형 상태관리에서의 controller 사용에는 두 가지 방식이 있습니다.
+GetX() 를 사용하는 방법과 Obx()를 사용하는 방법이 있습니다.
+
+GetX()를 사용하면 counter 변수의 접근을 controller.counter.value로 단순 상태 관리와의 차이점은
+.value로 접근한다는 차이가 있고 controller.increase() 함수로 실시간으로 데이터를 증가(업데이트)를 할 수 있게 됩니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/214235421-17187ab9-cbb0-474a-8803-c5af773f1770.png)
+
+## Obx() 를 사용하여 controller 사용하기
+```
+Obx를 사용하면 사용방식은 GetX와 비슷하지만 controller의 이름을 지정할 수가 없어서
+Get.find<ReactiveController>() 으로 접근을 해야합니다.
+
+controller = Get.find<ReactiveController>()
+```
+![image](https://user-images.githubusercontent.com/58906858/214236107-0c414f3d-84c2-4d71-a067-815c1fd42268.png)
