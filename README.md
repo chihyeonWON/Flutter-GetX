@@ -78,3 +78,10 @@ counter 변수는 ${controller.counter}으로 접근 가능하며 increase() 함
 변수의 값은 값 뒤에 ‘.obs’를 붙이게 됩니다. 
 업데이트의 경우 update() 함수를 부르지 않아도 됩니다.
 ```
+
+## 반응형 상태관리 controller 등록
+```
+반응형 상태관리 controller 역시 단순 상태 관리 controller와 마찬가지로
+사용하고자하는 화면의 클래스에 Get.put() 메서드로 controller를 등록해줍니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/214234554-dc205a2d-9ddd-49b9-b391-882f6a12b964.png)
