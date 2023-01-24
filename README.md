@@ -48,3 +48,9 @@ SimpleController를 생성합니다.
 ```
 ![image](https://user-images.githubusercontent.com/58906858/214229490-fc00e0d5-07aa-410d-aef8-09bf2ee592ca.png)
 
+## 생성된 Controller를 등록
+```
+앞서 생성한 SimpleController를 등록하기 위해서 Get.put() 메서드를 사용합니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/214230462-8a9a286f-000d-4c64-b91d-09a11ada0f87.png)
+
