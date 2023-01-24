@@ -41,3 +41,10 @@ GetX 상태관리는 단순 상태관리와 반응형 상태관리 2가지 방�
 ```
 ![image](https://user-images.githubusercontent.com/58906858/214228879-9d5195b9-6af4-48fb-9dba-340021b806fa.png)
 
+## 단순 상태 관리를 위한 Controller 생성
+```
+정수형 변수값을 저장하는 변수 counter와 이 변수를 1씩 증가시키는 increase() 함수가 들어있는 클래스
+SimpleController를 생성합니다.
+```
+![image](https://user-images.githubusercontent.com/58906858/214229490-fc00e0d5-07aa-410d-aef8-09bf2ee592ca.png)
+
