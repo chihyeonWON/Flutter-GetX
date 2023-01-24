@@ -91,6 +91,7 @@ class Reactive extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(ReactiveController()); // 반응형  상태 관리 controller 등록
     return Scaffold(
       appBar:AppBar(title:Text('반응형 상태관리'),)
     );
